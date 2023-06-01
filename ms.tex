@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+
+\input{preamble}
+
+\title{The solution to everything}
+\author{So-and-so$^1$ and David J.\,D.\ Earn$^2$\\
+  $^1$Such-and-such University;\\
+  $^2$Department of Mathematics and Statistics,\\
+  McMaster University, Hamilton, Ontario, Canada, L8S 4K1}
+
+\begin{document}
+
+\maketitle
+
+\linenumbers
+
+\begin{abstract}
+  We solve everything.  We do it clearly, concisely, and completely.
+  It is not obvious what we should do next.
+\end{abstract}
+
+%%\begin{keywords}
+%%epidemics, SIR model, \dots
+%%\end{keywords}
+
+%%\begin{MSCcodes}
+%%34E05, 34E13, 37N25, 92D30
+%%\end{MSCcodes}
+
+\section{Introduction}\label{sec:intro}
+
+Nobody has solved everything before.
+Now is the time.
+
+\section{Methods}\label{sec:methods}
+
+This is how to solve everything:
+
+Many \LaTeX\ packages and macros are loaded when you
+\verb|\input{preamble.tex}|, which is done in \texttt{ms.tex}.
+
+Rather than \macro{ref} or \macro{eqref}, use \macro{cref} (from the
+\texttt{cleveref} package) for referring to equations, figures,
+sections, appendices.  For example, use \verb|\cref{sec:results}| to
+get \cref{sec:results} and \verb|\cref{eq:everything,fig:everything}|
+to get \cref{eq:everything,fig:everything}.
+
+Use \macro{linenumbers} to get line numbers, and comment out this
+commend if you don't want line numbers.  To ensure you get line number
+in paragraphs that include an \texttt{align} environment, enclose in a
+\verb|linenomath*| environment like so:
+\begin{verbatim}
+\begin{linenomath*}
+\begin{align}\label{eq:everything}
+  U = 0,
+\end{align}
+\end{linenomath*}
+\end{verbatim}
+This example generated \cref{eq:everything} below.
+
+\section{Results}\label{sec:results}
+
+The complete equation is
+\begin{linenomath*}
+\begin{align}\label{eq:everything}
+  U = 0,
+\end{align}
+\end{linenomath*}
+where $U$ is for ``universe''.  This equation is illustrated
+in \cref{fig:everything}.  Remarkably, it does not depend on $\R_0$,
+at least not explicitly.  Even more remarkably, \cref{eq:everything}
+was not mentioned in some mathematical epidemiology review articles
+\cite{Earn+02,Earn04,Earn08,Earn09}.
+
+\begin{figure}
+  \begin{center}
+    \Huge EVERYTHING
+    \includegraphics[width=0.95\textwidth]{fig_everything.pdf}
+  \end{center}
+  \caption{This figure illustrates \cref{eq:everything}.}
+  \label{fig:everything}
+\end{figure}
+
+\section{Discussion}\label{sec:discussion}
+
+Everything is explained by \cref{eq:everything,fig:everything}.
+
+\section*{Acknowledgements}
+
+DJDE was supported by an NSERC Discovery Grant.
+
+\bibliography{ms}
+\bibliographystyle{vancouver}
+
+%%\input{mstables}
+
+%%\FloatBarrier
+
+%%\input{msfigures}
+
+\end{document}
