@@ -42,11 +42,11 @@ Many \LaTeX\ packages and macros are loaded when you
 Rather than \macro{ref} or \macro{eqref}, use \macro{cref} (from the
 \texttt{cleveref} package) for referring to equations, figures,
 sections, appendices.  For example, use \verb|\cref{sec:results}| to
-get \cref{sec:results} and \verb|\cref{eq:everything,fig:everything}|
-to get \cref{eq:everything,fig:everything}.
+get \cref{sec:results} and \verb|\cref{eq:everything,fig:everything,app:ToDo}|
+to get \cref{eq:everything,fig:everything,app:ToDo}.
 
 Use \macro{linenumbers} to get line numbers, and comment out this
-commend if you don't want line numbers.  To ensure you get line number
+command if you don't want line numbers.  To ensure you get line numbers
 in paragraphs that include an \texttt{align} environment, enclose in a
 \verb|linenomath*| environment like so:
 \begin{verbatim}
@@ -60,7 +60,7 @@ This example generated \cref{eq:everything} below.
 
 \section{Results}\label{sec:results}
 
-The complete equation is
+The complete equation for everything is
 \begin{linenomath*}
 \begin{align}\label{eq:everything}
   U = 0,
@@ -97,5 +97,16 @@ DJDE was supported by an NSERC Discovery Grant.
 %%\FloatBarrier
 
 %%\input{msfigures}
+
+\appendix
+
+\section{To Do}\label{app:ToDo}
+
+\begin{itemize}
+\item appendices
+\item tables
+\item Rnw
+\item journal templates
+\end{itemize}
 
 \end{document}
