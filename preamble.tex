@@ -105,9 +105,10 @@
 %%%%%%%%%%%%
 
 %% derivatives
-\newcommand{\d}{{\rm d}}
-\newcommand{\dd}[2]{{\frac{\d{#1}}{\d{#2}}}}
-\newcommand{\dbyd}[2]{{{\d{#1}}/{\d{#2}}}}
+%% note that \d is a built-in accent macro
+\newcommand{\dee}{{\rm d}}
+\newcommand{\dd}[2]{{\frac{\dee{#1}}{\dee{#2}}}}
+\newcommand{\dbyd}[2]{{{\dee{#1}}/{\dee{#2}}}}
 \newcommand{\ddt}[1]{\dd{#1}{t}}
 \newcommand{\ddtau}[1]{\dd{#1}{\tau}}
 \newcommand{\dbydt}[1]{\dbyd{#1}{t}}
@@ -117,6 +118,13 @@
 \newcommand{\xinit}{x_{\rm i}}
 \newcommand{\yinit}{y_{\rm i}}
 \newcommand{\zinit}{z_{\rm i}}
+%% versions with lower subscripts:
+%%\newcommand{\xinit}{x_{{}_{\rm i}}}
+%%\newcommand{\yinit}{y_{{}_{\rm i}}}
+%%\newcommand{\zinit}{z_{{}_{\rm i}}}
+%% effective initial conditions for j'th epidemic:
+\newcommand{\xinitj}[1]{x_{{\rm i},#1}}
+%%\newcommand{\xinitj}[1]{x_{{}_{{\rm i},#1}}}
 
 %% orders of magnitude
 \newcommand{\oh}{{o}} % {\mathcal o} is a vertical tilde
@@ -156,14 +164,6 @@
 
 \newcommand{\xin}{x_{\rm in}}
 \newcommand{\xH}{x_{\rm H}}
-
-%%\newcommand{\xinit}{x_{\rm i}}
-%%\newcommand{\xinitj}[1]{x_{{\rm i},#1}}
-\newcommand{\xinit}{x_{{}_{\rm i}}}
-\newcommand{\xinitj}[1]{x_{{}_{{\rm i},#1}}}
-
-%%\newcommand{\yinit}{y_{\rm i}}
-\newcommand{\yinit}{y_{{}_{\rm i}}}
 
 %%\newcommand{\xf}{x_{\rm f}}
 %%\newcommand{\xfj}[1]{x_{{\rm f},#1}}
@@ -267,7 +267,6 @@
 \newcommand{\todo}[1]{\comment{red}{TODO}{#1}}
 \newcommand{\thickredline}{{\color{red}\bigskip\begin{center}\linethickness{2mm}\line(1,0){250}\end{center}\bigskip}}
 \newcommand{\thickblueline}{{\color{blue}\bigskip\begin{center}\linethickness{2mm}\line(1,0){250}\end{center}\bigskip}}
-\renewcommand{\d}{\,{\rm d}}
 \newcommand{\term}[1]{{\bfseries\slshape #1}}
 \newcommand\ttbackslash{{\tt\char`\\}}
 \newcommand{\macro}[1]{{\tt\ttbackslash#1}}
