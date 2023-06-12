@@ -89,17 +89,52 @@
 \definecolor{Icol}{HTML}{E41A1C}
 \definecolor{Rcol}{HTML}{377EB8}
 
+\usepackage{framed} % framed environment (e.g., shaded)
+%% shadecolour must be defined for framed environment:
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+%%\definecolor[named]{shadecolor}{rgb}{0.9,0.9,0.9}
+%%\definecolor[named]{verylightgray}{rgb}{0.95,0.95,0.95}
+%%\definecolor[named]{lightgray}{rgb}{0.9,0.9,0.9}
+%%\definecolor[named]{grey}{rgb}{0.7,0.7,0.7}
+
+%% show labels for equations, sections, etc., in margin:
+\usepackage{showlabels}
+
 %%%%%%%%%%%%
 %% MACROS %%
 %%%%%%%%%%%%
 
+%% derivatives
+\newcommand{\d}{{\rm d}}
+\newcommand{\dd}[2]{{\frac{\d{#1}}{\d{#2}}}}
+\newcommand{\dbyd}[2]{{{\d{#1}}/{\d{#2}}}}
+\newcommand{\ddt}[1]{\dd{#1}{t}}
+\newcommand{\ddtau}[1]{\dd{#1}{\tau}}
+\newcommand{\dbydt}[1]{\dbyd{#1}{t}}
+\newcommand{\dbydtau}[1]{\dbyd{#1}{\tau}}
+
+%% initial conditions
+\newcommand{\xinit}{x_{\rm i}}
+\newcommand{\yinit}{y_{\rm i}}
+\newcommand{\zinit}{z_{\rm i}}
+
+%% orders of magnitude
 \newcommand{\oh}{{o}} % {\mathcal o} is a vertical tilde
 \newcommand{\Oh}{{\mathcal O}}
+
+%% heterogeneity functions
+\newcommand{\Hfun}{{\mathcal H}}
+\newcommand{\Kfun}{{\mathcal K}}
+
+%% epi parameters
 \newcommand{\R}{{\mathcal R}}
-\newcommand{\Rn}{{\mathcal R_{0}}}
+\newcommand{\Rn}{{\R_{0}}}
 \newcommand{\Tinf}{T_{\rm inf}}
 \newcommand{\Tlat}{T_{\rm lat}}
 \newcommand{\Tgen}{T_{\rm gen}}
+
+
+
 
 \newcommand{\ie}{\textit{i.e., }}
 \newcommand{\eg}{\textit{e.g., }}
