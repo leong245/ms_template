@@ -100,9 +100,15 @@
 %% show labels for equations, sections, etc., in margin:
 \usepackage{showlabels}
 
+%% clever spacing or not spacing:
+\usepackage{xspace}
+
 %%%%%%%%%%%%
 %% MACROS %%
 %%%%%%%%%%%%
+
+%% abbreviations
+\newcommand{\KM}{KM\xspace}
 
 %% derivatives
 %% note that \d is a built-in accent macro
@@ -256,7 +262,7 @@
 \newcommand{\Cphi}{C^{\phi}}
 \newcommand{\cphi}{c^{\phi}}
 
-\newcommand{\comment}{\nocomment}
+\newcommand{\comment}{\showcomment}
 \newcommand{\showcomment}[3]{\textcolor{#1}{\textbf{[#2: }\textsl{#3}\textbf{]}}}
 \newcommand{\nocomment}[3]{}
 \newcommand{\todd}[1]{\comment{red}{Todd}{#1}}
