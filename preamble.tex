@@ -78,6 +78,10 @@
 \Crefname{figure}{Figure}{Figures}
 \Crefname{appsec}{Appendix}{appendices}
 
+%% \citet for either named or numbered references
+%%\newcommand{\mycitet}[2]{\citet{#2}} % named
+\newcommand{\mycitet}[2]{#1~\cite{#2}} % numbered
+
 %%%%%%%%%%%%%%
 %% GRAPHICS %%
 %%%%%%%%%%%%%%
@@ -115,8 +119,10 @@
 \newcommand{\dee}{{\rm d}}
 \newcommand{\dd}[2]{{\frac{\dee{#1}}{\dee{#2}}}}
 \newcommand{\dbyd}[2]{{{\dee{#1}}/{\dee{#2}}}}
+\newcommand{\ddx}[1]{\dd{#1}{x}}
 \newcommand{\ddt}[1]{\dd{#1}{t}}
 \newcommand{\ddtau}[1]{\dd{#1}{\tau}}
+\newcommand{\dbydx}[1]{\dbyd{#1}{x}}
 \newcommand{\dbydt}[1]{\dbyd{#1}{t}}
 \newcommand{\dbydtau}[1]{\dbyd{#1}{\tau}}
 
@@ -264,6 +270,7 @@
 %%\newcommand{\Xright}{X^{\rm R}}
 \newcommand{\Xright}{\overrightarrow{X}}
 
+\newcommand{\calU}{\mathcal{U}}
 \newcommand{\calY}{\mathcal{Y}}
 \newcommand{\calW}{\mathcal{W}}
 \usepackage{mathrsfs} % \mathscr
