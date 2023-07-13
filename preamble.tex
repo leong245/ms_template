@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%%
 %% GEOMETRY %%
 %%%%%%%%%%%%%%
-%%\usepackage{geometry}  % Xee geometry.pdf to learn the layout options. There are lots.
+%%\usepackage{geometry}  % See geometry.pdf to learn the layout options. There are lots.
 %%\geometry{letterpaper} % ... or a4paper or a5paper or ...
 %%\geometry{landscape}   % Activate for rotated page geometry
 
@@ -24,6 +24,11 @@
 \usepackage{MnSymbol} % for \llangle; conflicts with amssymb so use amsfonts
 %\newcommand{\nc}[1]{\left\llangle{#1}\right\rrangle}
 
+\usepackage{placeins} % \FloatBarrier
+
+%% line numbering
+\usepackage{lineno}\renewcommand\thelinenumber{\color{gray}\arabic{linenumber}}
+
 %%%%%%%%%%%%%%%%%%%%%%%
 %% STANDARD PACKAGES %%
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -33,19 +38,28 @@
 %% we use this to get lower case cal from dutchcal (e.g., \mathdutchcal{g}).
 \DeclareMathAlphabet{\mathdutchcal}{U}{dutchcal}{m}{n} % Load the dutchcal font
 
-\usepackage{amsmath,amsfonts,enumerate,float,fullpage,graphicx,longtable,lscape,mathtools,multirow,rotating,stmaryrd,subcaption,tabularx,xcolor}
+\usepackage{amsmath,amsfonts,enumerate,float,fullpage,graphicx,longtable,lscape,mathtools,multirow,rotating,stmaryrd,subcaption,xcolor}
 
+%% show labels for equations, sections, etc., in margin:
+\usepackage{showlabels}
+
+%% clever spacing or not spacing:
+\usepackage{xspace}
+
+%%%%%%%%%%%%
+%% TABLES %%
+%%%%%%%%%%%%
+
+\usepackage{tabularx}
 \usepackage{tabularray} % tblr (more control over table structure)
 %% align numbers at decimal point in tables:
 %% https://tex.stackexchange.com/questions/2746/aligning-numbers-by-decimal-points-in-table-columns
 \usepackage{dcolumn}
 \newcolumntype{d}[1]{D{.}{.}{#1}}
 
-%\usepackage{showlabels}  % make equation labels visible in margin
-\usepackage{placeins} % \FloatBarrier
-
-%% line numbering
-\usepackage{lineno}\renewcommand\thelinenumber{\color{gray}\arabic{linenumber}}
+%%%%%%%%%%
+%% MATH %%
+%%%%%%%%%%
 
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}{Lemma}
@@ -104,15 +118,18 @@
 %%\definecolor[named]{lightgray}{rgb}{0.9,0.9,0.9}
 %%\definecolor[named]{grey}{rgb}{0.7,0.7,0.7}
 
-%% show labels for equations, sections, etc., in margin:
-\usepackage{showlabels}
-
-%% clever spacing or not spacing:
-\usepackage{xspace}
-
 %%%%%%%%%%%%
 %% MACROS %%
 %%%%%%%%%%%%
+
+%% Latin abbreviations
+\newcommand{\ie}{\textit{i.e., }}
+\newcommand{\eg}{\textit{e.g., }}
+\newcommand{\etc}{\textit{etc.}}
+%%\newcommand{\nb}{\textit{n.b., }}
+\newcommand{\nb}{\textit{N.B., }}
+\newcommand{\vs}{\textit{vs. }}
+\newcommand{\cf}{\textit{cf. }}
 
 %% abbreviations
 \newcommand{\KM}{KM\xspace}
@@ -172,18 +189,6 @@
 \newcommand{\Tinf}{T_{\rm inf}}
 \newcommand{\Tlat}{T_{\rm lat}}
 \newcommand{\Tgen}{T_{\rm gen}}
-
-
-
-
-\newcommand{\ie}{\textit{i.e., }}
-\newcommand{\eg}{\textit{e.g., }}
-\newcommand{\etc}{\textit{etc.}}
-%%\newcommand{\nb}{\textit{n.b., }}
-\newcommand{\nb}{\textit{N.B., }}
-\newcommand{\vs}{\textit{vs. }}
-\newcommand{\cf}{\textit{cf. }}
-
 \newcommand{\eoR}{\epsilon}
 %%\newcommand{\eoRinv}{\big(\frac{1}{\eoR}\big)}
 \newcommand{\eoRinv}{\eoR^{-1}}
@@ -239,15 +244,15 @@
 \makeatother
 
 %% DE: revised macros using \overset:
-%\newcommand{\Yabove}{\overset{\textrm{\tiny\upshape above}}{Y}}
+%%\newcommand{\Yabove}{\overset{\textrm{\tiny\upshape above}}{Y}}
 \newcommand{\Yabove}{Y^{\uparrow}}
-%\newcommand{\Ybelow}{\underset{\textrm{\tiny\upshape below}}{Y}}
+%%\newcommand{\Ybelow}{\underset{\textrm{\tiny\upshape below}}{Y}}
 \newcommand{\Ybelow}{Y_{\downarrow}}
 \newcommand{\Yout}[2]{\overset{\textrm{\tiny\upshape out}}{Y_{#1}^{#2}}}
 \newcommand{\Yin}[2]{\overset{\textrm{\tiny\upshape in}}{Y_{#1}^{#2}}}
 \newcommand{\Yxb}[2]{\overset{\textrm{\tiny\upshape $x$b}}{Y_{#1}^{#2}}}
 \newcommand{\Yyb}[2]{\overset{\textrm{\tiny\upshape $y$b}}{Y_{#1}^{#2}}}
-%\newcommand{\Yinscaled}[2]{\overset{\textrm{\tiny\upshape in}}{\Upsilon}_{#1}^{#2}}
+%%\newcommand{\Yinscaled}[2]{\overset{\textrm{\tiny\upshape in}}{\Upsilon}_{#1}^{#2}}
 \newcommand{\Yinscaled}[2]{\Upsilon_{#1}^{#2}}
 \newcommand{\yscaled}{\upsilon}
 \newcommand{\Ylc}[2]{\overset{\textrm{\tiny\upshape lc}}{Y}{}_{#1}^{#2}}
