@@ -1,7 +1,7 @@
 MS = ms
 PREAMBLE = preamble
 
-$(MS).pdf: $(MS).tex $(PREAMBLE).tex $(MS).bib
+$(MS).pdf: $(MS).tex $(PREAMBLE).tex *.bib
 	texi2pdf $(MS).tex
 
 clean:
