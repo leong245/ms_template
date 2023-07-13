@@ -79,8 +79,11 @@
 \Crefname{appsec}{Appendix}{appendices}
 
 %% \citet for either named or numbered references
+%% FIX: better to use \citeauthor and redefine \citet for numbered refs !!! 
 %%\newcommand{\mycitet}[2]{\citet{#2}} % named
 \newcommand{\mycitet}[2]{#1~\cite{#2}} % numbered
+
+\newcommand{\needref}{{\color{red}\bfseries$\langle$NEED REF$\rangle$}}
 
 %%%%%%%%%%%%%%
 %% GRAPHICS %%
@@ -287,6 +290,12 @@
 \newcommand{\Cphi}{C^{\phi}}
 \newcommand{\cphi}{c^{\phi}}
 
+%%%%%%%%%%%%%%
+%% COMMENTS %%
+%%%%%%%%%%%%%%
+
+%% using plain TeX to define \hide so it covers multiple paragraphs:
+\long\def\hide#1{{\color{lightgray}#1}}
 \newcommand{\comment}{\showcomment}
 \newcommand{\showcomment}[3]{\textcolor{#1}{\textbf{[#2: }\textsl{#3}\textbf{]}}}
 \newcommand{\nocomment}[3]{}
