@@ -1,5 +1,5 @@
 \newif\ifpnas
-\pnasfalse
+\pnastrue
 
 \ifpnas
   \documentclass[9pt,twocolumn,twoside]{pnas/pnas_research_article/pnas-new}
@@ -103,11 +103,6 @@ Everything is explained by \cref{eq:everything,fig:everything}.
 DJDE was supported by an NSERC Discovery Grant.
 
 \bibliography{ms}
-\ifpnas
-  %% pnas-new.cls automatically sets up pnas-new.bst
-\else
-  \bibliographystyle{vancouver}
-\fi
 
 %%\input{mstables}
 

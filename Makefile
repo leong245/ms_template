@@ -4,8 +4,11 @@ PREAMBLE = preamble
 $(MS).pdf: $(MS).tex $(PREAMBLE).tex *.bib
 	texi2pdf $(MS).tex
 
+ms_pnas.pdf: *.tex *.bib
+	texi2pdf -I pnas/pnas_research_article/ ms_pnas.tex
+
 clean:
-	rm -f $(MS).{aux,bbl,blg,log,out}
+	rm -f *.{aux,bbl,blg,log,out}
 
 fresh: clean
-	rm -f $(MS).pdf
+	rm -f $(MS).pdf ms_pnas.pdf
