@@ -231,6 +231,27 @@
 \newcommand{\ymin}[1]{\barbelow{y}_{{}_{#1}}}
 \newcommand{\yminj}[2]{\barbelow{y}_{{}_{#1,#2}}}
 
+%% ART parameters
+\newcommand{\Sg}{{\mathcal S}_{\rm g}} % cost to guarders from sneakers
+\newcommand{\Ghat}{\widehat{G}}
+\newcommand{\sneakprop}{\sigma}
+\newcommand{\sneakprophat}{\hat{\sneakprop}}
+\newcommand{\paternityloss}{\ell}
+\newcommand{\nug}{\nu_{\rm g}}
+\newcommand{\nus}{\nu_{\rm s}}
+\newcommand{\Kg}{K_{\rm g}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ONEHALF SYMBOL WITH SIDEWAYS SLASH:
+%%https://tex.stackexchange.com/questions/28866/how-to-print-frac12-by-a-single-unicode-character
+%%all 3 of the following packages are needed to get \textonehalf as sideways 1/2
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\newcommand{\Ghalf}{G_{{}_{\!\text{\textonehalf}}}} % Ghalf
+\newcommand{\xhalf}{x_{{}_{\!\text{\textonehalf}}}} % xhalf
+%% NOTE: \text causes problems with tikz-generated figures: see make_figs.R
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \makeatletter
 \newcommand{\vast}{\bBigg@{4}}
 \newcommand{\Vast}{\bBigg@{5}}
