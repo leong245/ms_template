@@ -20,10 +20,6 @@
 %% \usepackage[nomarkers,figuresonly]{endfloat}
 %\usepackage[nomarkers]{endfloat}
 
-%% FIX: what do we use this package for?
-\usepackage{MnSymbol} % for \llangle; conflicts with amssymb so use amsfonts
-%\newcommand{\nc}[1]{\left\llangle{#1}\right\rrangle}
-
 \usepackage{placeins} % \FloatBarrier
 
 %% line numbering
@@ -185,7 +181,7 @@
 %% epi parameters
 \newcommand{\Tau}{{\mathcal T}} % capital \tau
 \newcommand{\R}{{\mathcal R}}
-\newcommand{\Rn}{{\R_{0}}}
+%%\newcommand{\Rn}{{\R_{0}}}
 \newcommand{\Tinf}{T_{\rm inf}}
 \newcommand{\Tlat}{T_{\rm lat}}
 \newcommand{\Tgen}{T_{\rm gen}}
@@ -251,6 +247,11 @@
 \newcommand{\xhalf}{x_{{}_{\!\text{\textonehalf}}}} % xhalf
 %% NOTE: \text causes problems with tikz-generated figures: see make_figs.R
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MnSymbol must be loaded after lmodern:
+%% https://tex.stackexchange.com/questions/560963/brackets-in-equation-environment-are-being-ignored
+%% FIX: what do we use this package for?
+\usepackage{MnSymbol} % for \llangle; conflicts with amssymb so use amsfonts
+%\newcommand{\nc}[1]{\left\llangle{#1}\right\rrangle}
 
 \makeatletter
 \newcommand{\vast}{\bBigg@{4}}
@@ -330,7 +331,7 @@
 \newcommand{\david}[1]{\comment{cyan}{David}{#1}}
 \newcommand{\dsugg}[1]{{\color{red}#1}}
 \newcommand{\bmb}[1]{\comment{magenta}{BMB}{#1}}
-\newcommand{\todo}[1]{\comment{red}{TODO}{#1}}
+%%\newcommand{\todo}[1]{\comment{red}{TODO}{#1}}
 \newcommand{\thickredline}{{\color{red}\bigskip\begin{center}\linethickness{2mm}\line(1,0){250}\end{center}\bigskip}}
 \newcommand{\thickblueline}{{\color{blue}\bigskip\begin{center}\linethickness{2mm}\line(1,0){250}\end{center}\bigskip}}
 \newcommand{\term}[1]{{\bfseries\slshape #1}}
