@@ -8,18 +8,23 @@
 %% https://tex.stackexchange.com/questions/8612/write-date-time-and-time-zone
 \usepackage{filemod}
 \newcommand{\spewmoddates}{%
-  \\
+  \\ \smallskip
   \emph{\bfseries File modification history:}\\
   \macro{jobname}: \texttt{\jobname} \\
+  \texttt{\jobname.pdf} last modified:
+    \texttt{\filemodprint{\jobname.pdf}} \\
   \texttt{\jobname.tex} last modified:
     \texttt{\filemodprint{\jobname}} \\
   \texttt{\jobname.bib} last modified:
     \texttt{\filemodprint{\jobname.bib}} \\
+  \texttt{preamble.text} last modified:
+    \texttt{\filemodprint{preamble.tex}} \\
   \texttt{\jobname\_pnas.tex} last modified:
     \texttt{\filemodprint{ms_pnas.tex}} \\
   \macro{pdfcreationdate}: \texttt{\pdfcreationdate} \\
   \texttt{\detokenize{\pdffilemoddate{\jobname}}}: 
     \texttt{\pdffilemoddate{\jobname}}
+  \\ \smallskip
 }
 
 %%%%%%%%%%%%%%
