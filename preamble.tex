@@ -4,6 +4,21 @@
 \usepackage{scrtime} % for \thistime (this package MUST be listed first!)
 \date{\today\ @ \thistime}
 
+%% file modification dates
+%% https://tex.stackexchange.com/questions/8612/write-date-time-and-time-zone
+\usepackage{filemod}
+\newcommand{\spewmoddates}{%
+  \\
+  \emph{\bfseries File modification history:}\\
+  \macro{jobname}: \texttt{\jobname} \\
+  \texttt{\jobname.tex} last modified:
+    \texttt{\filemodprint{\jobname}} \\
+  \texttt{\jobname.bib} last modified:
+    \texttt{\filemodprint{\jobname.bib}} \\
+  \texttt{\jobname\_pnas.tex} last modified:
+    \texttt{\filemodprint{ms_pnas.tex}}
+}
+
 %%%%%%%%%%%%%%
 %% GEOMETRY %%
 %%%%%%%%%%%%%%
