@@ -1,7 +1,11 @@
 MS = ms
 PREAMBLE = preamble
 
-$(MS).pdf: $(MS).tex $(PREAMBLE).tex *.bib
+$(MS).pdf: $(MS).Rnw $(PREAMBLE).tex *.bib
+	Rscript -e "knitr::knit2pdf('ms.Rnw')"
+
+## version starting from .tex:
+$(MS).pdf.temp: $(MS).tex $(PREAMBLE).tex *.bib
 	##texi2pdf $(MS).tex
 	pdflatex $(MS)
 	pdflatex $(MS)
