@@ -2,7 +2,12 @@ MS = ms
 PREAMBLE = preamble
 
 $(MS).pdf: $(MS).tex $(PREAMBLE).tex *.bib
-	texi2pdf $(MS).tex
+	##texi2pdf $(MS).tex
+	pdflatex $(MS)
+	pdflatex $(MS)
+	bibtex $(MS)
+	pdflatex $(MS)
+	pdflatex $(MS)
 
 ms_pnas.pdf: *.tex *.bib
 	texi2pdf -I pnas/pnas_research_article/ ms_pnas.tex

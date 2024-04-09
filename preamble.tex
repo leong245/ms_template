@@ -351,6 +351,29 @@
 \newcommand{\Cphi}{C^{\phi}}
 \newcommand{\cphi}{c^{\phi}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% relatively scaled symbols using scalerel package %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are many places where I used a hack of a double subscript in
+%% in order to get a smaller subscript, but this often makes the
+%% subscript too low.  A better solution is to use the scalerel
+%% package as in the following examples.  These examples were just an
+%% experiment but it would be good to have some genuinely useful
+%% examples.
+%% https://tex.stackexchange.com/questions/112580/rescaling-a-math-symbol
+\usepackage{scalerel}
+% \newcommand\scaledinfty{{\,\scaleobj{0.8}{\infty}}}
+% %%\newcommand\scaledinfty{\raisebox{-2pt}{{\footnotesize${\,\scaleobj{0.8}{\infty}}$}}}
+% \newcommand{\Xinfty}{\overset{\scaledinfty}{X}}
+% \newcommand{\XinftyTRYa}{\overset{\scaledinfty}{\scaleobj{0.9}{X}}}
+% \newcommand{\XinftyTRYb}{\overset{\scaledinfty}{\scaleobj{0.8}{X}}}
+% \newcommand{\Zinfty}{\overset{\scaledinfty}{Z}}
+% \newcommand{\Xcinfty}{\Xinfty_{\rm c}}
+% \newcommand{\Zcinfty}{\Zinfty_{\rm c}}
+% \newcommand{\Xninfty}{\Xinfty_n}
+% \newcommand{\Zninfty}{\Zinfty_n}
+\newcommand{\Xybfancy}[2]{\overset{\textrm{\tiny\upshape $y$b}}X{}_{#1}^{#2}}
+
 %%%%%%%%%%%%%%
 %% COMMENTS %%
 %%%%%%%%%%%%%%

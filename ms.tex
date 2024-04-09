@@ -75,6 +75,31 @@ in paragraphs that include an \texttt{align} environment, enclose in a
 \end{verbatim}
 This example generated \cref{eq:everything} below.
 
+\subsection{Fancy symbols}
+
+\david{This subsection is in progress\dots}
+
+Developing good notation is often a serious challenge.
+For example, \cite{ParsEarn24} used $\Xyb{0}{i}(y)$ for
+an approximation to $X(y)$ within the $y$-axis
+boundary layer.  The \texttt{scalerel} package is very helpful
+for constructing complicated symbols in a way that scales
+appropriately
+when they are used in subscripts.   The macros used
+in \cite{ParsEarn24} produced $A_{\Xyb{0}{i}}$, whereas
+using the \macro{scaleobj} macro from \texttt{scalerel} yields
+$A_{\Xybfancy{0}{i}}$ $A_{\Xybfancy{\Xybfancy{0}{i}}{i}}$
+$A_{\Xybfancy{\scaleobj{0.8}{\Xybfancy{0}{i}}}{i}}$
+
+\newcommand{\tmpout}{{x_{A}}}
+\begin{equation}
+\tmpout_{\tmpout_{\tmpout_{\tmpout}}}
+\end{equation}
+\renewcommand{\tmpout}{{x_{\scaleobj{0.8}{A}}}}
+\begin{equation}
+\tmpout_{\tmpout_{\tmpout_{\tmpout}}}
+\end{equation}
+
 \section{Results}\label{sec:results}
 
 The complete equation for everything is
