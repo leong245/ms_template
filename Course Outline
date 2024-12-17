@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics 4W03 Reading Course Outline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref} % Makes links clickable
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{url}
+
+% Title Section
+\begin{document}
+
+\begin{center}
+    \textbf{\Large{Mathematics 4W03 Reading Course, Winter 2025}}\\
+    \underline{Student}: Sarah Leong\\
+    \underline{Instructor}: David Earn
+\end{center}
+
+% Course Information
+\section*{Course Information}
+\textbf{Instructor:} David Earn\\
+\textbf{Course Dates:} 2025-01-06 -- 2025-04-08\\
+\textbf{Units:} 3.00\\
+\textbf{Course Delivery Mode:} Research\\
+\textbf{Course Description:} Directed reading in areas of mathematics of interest to the student and the instructor. This course includes a scientific communication component. Prerequisite(s): GPA of at least 7.0 and permission of the Chair of the Department. MATH 4W03 may be repeated if on a different topic.
+
+% Course Evaluation
+\section*{Course Evaluation}
+\captionof{table}{Course Evaluation Breakdown}
+\vspace{-0.3cm}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l l}
+        \textbf{Component} & \textbf{Weight} \\
+        \hline
+        Research Notebook & 15\% \\
+        Discussions / Meetings & 25\% \\
+        Final Presentation & 10\% \\
+        Final Report & 50\% \\
+        \hline
+    \end{tabular}
+\end{table}
+\vspace{-0.3cm}
+\begin{center}\parbox{.6\textwidth}{\centering \small\textit{Note:} Weights may shift between components depending on the research needs and questions that develop.}
+\end{center}
+
+% Course Evaluation Details
+\section*{Course Evaluation Details}
+\subsubsection*{Research Notebook}
+\begin{itemize}
+    \item Diary of thoughts, questions, and progress in relation to this course.
+    \item Updated and pushed to GitHub every week before and after meetings with the instructor. The notebook will be a markdown file on the private GitHub repository shared by the student and the instructor.
+    \item Marked based on the quality of the diary and keeping it up to date.
+\end{itemize}
+
+\subsubsection*{Readings}
+\begin{itemize}
+    \item Explore multiple papers and other sources to address the research question: \textit{``Could smallpox have been eradicated using variolation rather than vaccination?''}
+    \item Plans, including the list of readings and the structure of the final paper, will be revised as the term progresses. Relevant sources include: \cite{duncan1993dynamics, earn2020plague, fenner1988smallpox, hopkins2002greatest, krylova2020patterns, levine2022facemasking, mcneill1998plagues, razzell1977conquest}.
+\end{itemize}
+
+\subsubsection*{Discussions / Meetings}
+\begin{itemize}
+    \item Based on the plans indicated in the research notebook, the student will come prepared, having read sources, written documents (such as draft sections for the final paper or supplementary material associated with it), and/or completion of other tasks (e.g., coding in R, mathematical modeling/analysis, library or online searches, etc.).
+    \item The student will be prepared to lead discussion on the agreed-upon topics for the week and will raise any other important issues that arise.
+    \item The student will also attend the weekend Mac-TheoBio lab meetings whenever possible.
+\end{itemize}
+
+\subsubsection*{Final Report}
+\begin{itemize}
+    \item The primary deliverable for the course will be a draft manuscript, in the style of a paper suitable for submission to a refereed journal.
+    \item The manuscript will be written in \LaTeX, with supplementary material written in either \LaTeX~or knitr (to be discussed with the instructor). The student will use a ~\href{https://github.com/davidearn/ms_template}{\LaTeX~template provided by the instructor}.
+\end{itemize}
+
+% Tentative Schedule
+\subsection*{Tentative Course Schedule}
+
+\noindent\textbf{Until the mid-term recess:}
+\leavevmode
+\hangindent=1.5cm Readings, discussions, exciting research, updating research notebook, ...
+\vspace{0.7em}
+
+\noindent\textbf{3 March 2025:} First draft of final report.
+\vspace{0.7em}
+
+\noindent\textbf{Sometime in April 2025:} Oral presentation to the Mac-TheoBio lab.
+\vspace{0.7em}
+
+\noindent\textbf{Sometime in April 2025:} Submission of final report.
+
+% Bibliography
+\bibliographystyle{vancouver} % Specify Vancouver style for BibTeX
+\bibliography{references}
+
+
+\end{document}
